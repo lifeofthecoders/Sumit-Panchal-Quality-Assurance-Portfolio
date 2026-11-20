@@ -7,11 +7,12 @@ import { useEffect, useState } from 'react';
 const ease = [.22, 1, .36, 1];
 const stagger = {
   hidden: {},
-  show: { transition: { delayChildren: .28, staggerChildren: .105 } },
+  show: {transition: {delayChildren: .6, staggerChildren: .2,},},
 };
+
 const item = {
   hidden: { opacity: 0, y: 26, filter: 'blur(7px)' },
-  show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: .78, ease } },
+  show: {opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 1.3, ease },},
 };
 
 export default function Hero({ onFeaturedProject }) {
@@ -42,7 +43,7 @@ export default function Hero({ onFeaturedProject }) {
           className="hero-word"
           initial={animateHero ? { opacity: 0, y: 34, scale: .975, filter: 'blur(12px)' } : false}
           animate={{ opacity: .82, y: 0, scale: 1, filter: 'blur(0px)' }}
-          transition={animateHero ? { duration: 1.15, delay: .1, ease } : { duration: 0 }}
+          transition={animateHero ? { duration: 2, delay: .3, ease } : { duration: 0 }}
         >
           {portfolioLetters.map((letter, index) => (
             <motion.span
@@ -50,7 +51,7 @@ export default function Hero({ onFeaturedProject }) {
               key={`${letter}-${index}`}
               initial={animateHero ? { opacity: 0, y: 52, rotateX: -22 } : false}
               animate={{ opacity: 1, y: 0, rotateX: 0 }}
-              transition={animateHero ? { duration: .82, delay: .18 + index * .065, ease } : { duration: 0 }}
+              transition={animateHero ? { duration: 1.5, delay: .35 + index * .12, ease } : { duration: 0 }}
             >{letter}</motion.span>
           ))}
         </motion.div>
@@ -60,7 +61,7 @@ export default function Hero({ onFeaturedProject }) {
         className="hero-portrait"
         initial={animateHero ? { opacity: 0, y: 86, scale: .94, filter: 'blur(12px)' } : false}
         animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
-        transition={animateHero ? { duration: 1.15, delay: .48, ease } : { duration: 0 }}
+        transition={animateHero ? { duration: 2, delay: .8, ease } : { duration: 0 }}
       >
         <img src={profile.portrait.src} srcSet={profile.portrait.srcSet} sizes="(max-width: 600px) 90vw, 40vw" fetchPriority="high" alt={profile.portrait.alt} />
       </motion.div>
@@ -83,7 +84,7 @@ export default function Hero({ onFeaturedProject }) {
         className="hero-aside"
         initial={animateHero ? { opacity: 0, x: 24 } : false}
         animate={{ opacity: 1, x: 0 }}
-        transition={animateHero ? { duration: .8, delay: .8, ease } : { duration: 0 }}
+        transition={animateHero ? { duration: 1.5, delay: 1.2, ease } : { duration: 0 }}
       >
         <div className="asterisk"><Asterisk size={25} /></div>
         <p>Every release.<br /><strong>Quality checked.</strong></p>
@@ -96,7 +97,7 @@ export default function Hero({ onFeaturedProject }) {
         className="hero-bottom"
         initial={animateHero ? { opacity: 0, y: 18 } : false}
         animate={{ opacity: 1, y: 0 }}
-        transition={animateHero ? { duration: .65, delay: 1.15, ease } : { duration: 0 }}
+        transition={animateHero ? { duration: 1.2, delay: 1.8, ease } : { duration: 0 }}
       >
         <button type="button" className="hero-featured-button" onClick={onFeaturedProject}><span className="play-icon"><Play size={13} /></span> VIEW FEATURED PROJECT</button>
         <a className="scroll-discover" href="#work">SCROLL TO DISCOVER <ArrowDown size={13} /></a>

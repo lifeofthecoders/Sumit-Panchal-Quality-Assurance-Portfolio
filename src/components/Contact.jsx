@@ -5,7 +5,7 @@ import { ArrowUpRight, Mail, Phone, Linkedin, MapPin, Plus, Send, Github, Messag
 import { profile } from '../data/portfolio';
 import { GOOGLE_APPS_SCRIPT_URL } from '../config/contact';
 
-const projectTypes = ['Website / Web application', 'Mobile application', 'Manual QA testing', 'Regression / Release testing', 'Test documentation', 'Other enquiry'];
+const projectTypes = ['Website / Web Application', 'Mobile Application', 'Manual QA Testing', 'Regression / Release Testing', 'Test Documentation', 'Create A Portfolio', 'Other Enquiry'];
 
 export default function Contact() {
   const motionOn = useMotionEnabled();
@@ -35,7 +35,7 @@ export default function Contact() {
             message: form.message.trim(),
           }).toString(),
         });
-        setStatus('Your enquiry has been sent. Thank you — I’ll get back to you soon.');
+        setStatus('Your enquiry has been sent. Thank you - I’ll get back to you soon.');
         setForm({ name: '', email: '', projectType: '', message: '' });
       } catch (error) {
         console.error('Contact form submission failed:', error);

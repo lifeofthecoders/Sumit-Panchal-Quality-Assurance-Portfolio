@@ -75,7 +75,7 @@ export default function About() {
         <aside className="quote-panel">
           <span className="quote-mark">“</span>
           <p>From requirements and <em>risk-based testing</em> to stable, user-friendly releases.</p>
-          <span className="signature">Sumit</span>
+          <span className="signature">Sumit Panchal</span>
           <small>QUALITY YOU CAN SHIP WITH</small>
           <CheckCircle2 className="quote-icon" size={18} />
         </aside>
