@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090909" />
+    <meta name="description" content="Sumit Panchal - Manual QA Engineer and Quality Assurance Analyst. Explore QA case studies, testing experience, skills, and professional credentials." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sumit Panchal - Senior Quality Assurance Portfolio" />
+    <meta property="og:description" content="Testing that protects. Manual QA, functional testing, regression testing, test design, and reliable releases." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sumit Panchal - Senior Quality Assurance Portfolio" />
+    <meta name="twitter:description" content="Manual QA Engineer · Quality Assurance Analyst · Web & Mobile Testing." />
+    <link rel="stylesheet" href="/src/styles/app.css" />
+    <style>
+      html, body { margin: 0; min-height: 100%; background: #090909; color: #f2efeb; }
+      .skip-link:not(:focus):not(:focus-visible) { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+      .skip-link:focus, .skip-link:focus-visible { position: fixed !important; top: 12px !important; left: 12px !important; z-index: 9999 !important; width: auto !important; height: auto !important; margin: 0 !important; padding: 12px 18px !important; clip: auto !important; overflow: visible !important; background: #ca2032 !important; color: #fff !important; }
+      #root { min-height: 100vh; background: #090909; }
+      .boot-loading { min-height: 100vh; display: grid; place-items: center; color: #a09c9a; background: #090909; font: 700 11px/1.5 Arial, sans-serif; letter-spacing: .18em; }
+      .boot-error { min-height: 100vh; display: grid; align-content: center; gap: 12px; padding: 40px; background: #090909; color: #f2efeb; font: 14px/1.6 Arial, sans-serif; }
+      .boot-error h1 { margin: 0; font-size: clamp(24px, 4vw, 42px); }
+      .boot-error p { color: #a09c9a; }
+      .boot-error-kicker { color: #ef4151 !important; font-weight: 800; letter-spacing: .16em; }
+      .boot-error pre { max-width: 100%; overflow: auto; padding: 16px; border: 1px solid #453237; background: #111; color: #f2b9bf; white-space: pre-wrap; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Sumit Panchal - Quality Assurance Portfolio</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <noscript>This portfolio requires JavaScript to display its interactive sections.</noscript>
+    <div id="root"><div class="boot-loading">SUMIT PANCHAL · SENIOR QUALITY ASSURANCE PORTFOLIO</div></div>
+    <script>
+      (function () {
+        function showStartupError(message) {
+          var root = document.getElementById('root');
+          if (!root || !root.querySelector('.boot-loading')) return;
+          var panel = document.createElement('main');
+          panel.className = 'boot-error';
+          var kicker = document.createElement('p');
+          kicker.className = 'boot-error-kicker';
+          kicker.textContent = 'PORTFOLIO STARTUP ERROR';
+          var heading = document.createElement('h1');
+          heading.textContent = 'The portfolio could not finish loading.';
+          var help = document.createElement('p');
+          help.textContent = 'Check the Vite terminal for the first module or dependency error, then refresh.';
+          var details = document.createElement('pre');
+          details.textContent = message || 'A JavaScript module failed to load.';
+          panel.append(kicker, heading, help, details);
+          root.replaceChildren(panel);
+        }
+        window.addEventListener('error', function (event) {
+          var target = event && event.target;
+          var moduleFailed = target && target.tagName === 'SCRIPT' && target.type === 'module';
+          if (event && (event.error || event.message || moduleFailed)) {
+            showStartupError(event.message || (target && target.src ? 'Failed to load module: ' + target.src : 'A JavaScript module failed to load.'));
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function (event) {
+          showStartupError(event && event.reason ? String(event.reason.message || event.reason) : 'An unhandled promise rejection occurred.');
+        });
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
